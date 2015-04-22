@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  
+  #home controller routes
+  root 'home#index'
+  get 'contact' => 'home#contact'
+  
+  #session controller routes
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+  resources :sessions
+  
+  #user controller routes
+  get 'users/new'
+  resources :users
+  
+
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
