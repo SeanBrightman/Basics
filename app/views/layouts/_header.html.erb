@@ -1,11 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to image_tag("blogo2.png", alt: "Basic",class: "logo"), '/' %>
+        <%= link_to image_tag("blogo2.png", :align=> "left",class: "logo"), '/' %>
 
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <%= link_to "Sign up", "/users/new", class: "btn btn-success" %>
-            <%= link_to "Log in", "/sessions/new", class: "btn btn-primary" %>
+            <li></li><%= link_to "Sign up", "/users/new", class: "btn btn-success", :position=> "right" %></li>
+            <li></li><%= link_to "Log in", "/sessions/new", class: "btn btn-primary", :position=> "right" %></li>
+            
           </ul>
         </nav>
       </div>
